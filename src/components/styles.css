@@ -62,6 +62,7 @@ body {
   margin-left: 7vw;
   margin-right: 7vw;
   color: #f6f7f9;
+  line-height: 2rem;
 }
 
 .larger_header {
@@ -75,6 +76,21 @@ body {
   margin-left: 7vw;
   margin-right: 7vw;
   font-size: 1.8em;
+  color: #149eca;
+}
+
+.text_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  margin-bottom: 8px;
+  max-width: 740px;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  font-size: 1.25rem;
+  line-height: 2.031rem;
   color: #f6f7f9;
 }
 
@@ -98,8 +114,8 @@ body {
   white-space: normal;
   word-wrap: break-word;
   text-align: center;
-  color: #149eca;
-  background-color: #343a46;
+  color: #f6f7f9;
+  background-color: #087ea4;
   padding: 14px 24px;
   border-radius: 4px;
   cursor: pointer;
@@ -107,5 +123,30 @@ body {
 }
 
 .welcome_button:hover {
-  background-color: #008060;
+  background-color: #149eca;
+}
+
+.start_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.23em;
+  width: 15vw;
+  min-width: 150px;
+  height: 7vh;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+  color: #f6f7f9;
+  background-color: #087ea4;
+  padding: 14px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  border-width: 0;
+}
+
+.start_button:hover {
+  background-color: #149eca;
 }

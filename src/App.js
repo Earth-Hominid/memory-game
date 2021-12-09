@@ -1,13 +1,7 @@
-import Nav from './components/Nav';
-import Welcome from './components/Welcome';
+import Controller from './components/Controller';
 
 const App = () => {
-  return (
-    <>
-      <Nav />
-      <Welcome />
-    </>
-  );
+  return <Controller />;
 };
 
 export default App;
