@@ -153,8 +153,39 @@ body {
 
 .game_area {
   display: flex;
+  margin: 1vw;
 }
 
 .game_board {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.image_holder {
+  width: 250px;
+  padding: 5px;
+  margin: 30px;
+  background-color: #16181d;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.character_image {
+  width: 220px;
+  height: auto;
+  margin: 10px auto 5px auto;
+}
+
+.character_name {
+  color: #f6f7f9;
+  font-size: 1.25em;
 }

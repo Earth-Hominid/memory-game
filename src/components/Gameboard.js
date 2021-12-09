@@ -27,14 +27,13 @@ const Gameboard = () => {
       <div className="card">
         <div className="image_holder">
           <img
+            className="character_image"
             key={index}
             src={cardDeck.image}
             alt={cardDeck.name}
             data-id={index}
           />
-          <div className="name_holder">
-            <h2 className="character_name">{cardDeck.name}</h2>
-          </div>
+          <h2 className="character_name">{cardDeck.name}</h2>
         </div>
       </div>
     </>
