@@ -31,7 +31,7 @@ function Controller() {
     case 3:
       return (
         <>
-          {/* <Scoreboard /> */}
+          <Scoreboard />
           <Gameboard />
         </>
       );

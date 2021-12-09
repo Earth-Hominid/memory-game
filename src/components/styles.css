@@ -151,6 +151,45 @@ body {
   background-color: #149eca;
 }
 
+.board_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1vw;
+  width: 100%;
+  height: auto;
+}
+
+.score_board {
+  height: 280.5px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.score_board::after {
+  content: '';
+  background-image: url('./images/marvel_comp.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.score_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f6f7f9;
+  margin-left: 10vw;
+  border: solid 1px #f6f7f9;
+}
+
 .game_area {
   display: flex;
   margin: 1vw;
