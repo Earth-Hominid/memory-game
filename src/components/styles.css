@@ -150,3 +150,11 @@ body {
 .start_button:hover {
   background-color: #149eca;
 }
+
+.game_area {
+  display: flex;
+}
+
+.game_board {
+  display: flex;
+}
