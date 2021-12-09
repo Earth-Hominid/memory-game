@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #23272f;
+}
+
+#logo {
+  height: 200px;
+  width: auto;
+}
+#logo-holder {
+  margin-left: 2vw;
+}
+
+.navigation {
+  height: 10.5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  background-color: #23272f;
+}
+
+.nav_headline {
+  font-family: Roboto;
+  font-size: 2.5em;
+}
+
+.card_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.welcome_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  margin-bottom: 8px;
+  max-width: 740px;
+  font-size: 1.5em;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  color: #f6f7f9;
+}
+
+.larger_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  margin-bottom: 8px;
+  max-width: 740px;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  font-size: 1.8em;
+  color: #f6f7f9;
+}
+
+.welcome_button_holder {
+  margin-top: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.23em;
+  width: 15vw;
+  min-width: 150px;
+  height: 7vh;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+  color: #149eca;
+  background-color: #343a46;
+  padding: 14px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-width: 0;
+}
+
+.welcome_button:hover {
+  background-color: #008060;
+}
