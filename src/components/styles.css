@@ -232,17 +232,7 @@ body {
 .cards {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
-}
-
-.tarts {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.tart {
-  flex: 0 1 calc(25% - 1em);
+  justify-content: space-around;
 }
 
 .image_holder {

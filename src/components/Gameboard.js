@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import data from './utils/data';
+import Cards from './Cards';
 
 const startingGameWidth = 4;
 const cardDeck = data;
@@ -22,28 +23,13 @@ const Gameboard = () => {
     createStartingBoard();
   }, []);
 
-  const startingOrder = startingCardOrder.map((cardDeck, index) => (
-    <>
-      <section className="tarts">
-        <div className="tart">
-          <div className="image_holder">
-            <img
-              className="character_image"
-              key={index}
-              src={cardDeck.image}
-              alt={cardDeck.name}
-              data-id={index}
-            />
-            <h2 className="character_name">{cardDeck.name}</h2>
-          </div>
-        </div>
-      </section>
-    </>
-  ));
-
   return (
     <div className="game_area">
-      <div className="game_board">{startingOrder}</div>
+      <div className="game_board">
+        <section className="cards">
+          <Cards cardDeck={startingCardOrder} />
+        </section>
+      </div>
     </div>
   );
 };
