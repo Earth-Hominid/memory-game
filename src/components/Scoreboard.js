@@ -1,18 +1,17 @@
-import { useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import quotes from './utils/quotes';
 
 const quotesArray = quotes;
 
 const Scoreboard = () => {
-  const [startingQuote, setStartingQuote] = useState('');
+  const [startingQuote, setStartingQuote] = useState(quotes);
 
   const getRandomQuote = () => {
     const randomStartingQuote = '';
 
     for (let i = 0; i < quotesArray.length; i++) {
       const randomStartingQuote =
-        quotesArray[Math.floor(Math.random() * quotesArray.length)];
+        quotes[Math.floor(Math.random() * quotes.length)];
       return randomStartingQuote;
     }
     setStartingQuote(randomStartingQuote);
@@ -29,7 +28,7 @@ const Scoreboard = () => {
       <div className="board_area">
         <div className="score_board">
           <div className="quote_container">
-            <h2 className="quote">{startingQuote}</h2>
+            <h2 className="quote">{startingQuote.quote}</h2>
             <div className="score_wrapper">
               <div className="score_container">
                 <h3 className="score_heading">SCORE</h3>

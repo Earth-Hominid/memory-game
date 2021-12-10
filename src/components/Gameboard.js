@@ -24,18 +24,20 @@ const Gameboard = () => {
 
   const startingOrder = startingCardOrder.map((cardDeck, index) => (
     <>
-      <div className="card">
-        <div className="image_holder">
-          <img
-            className="character_image"
-            key={index}
-            src={cardDeck.image}
-            alt={cardDeck.name}
-            data-id={index}
-          />
-          <h2 className="character_name">{cardDeck.name}</h2>
+      <section className="tarts">
+        <div className="tart">
+          <div className="image_holder">
+            <img
+              className="character_image"
+              key={index}
+              src={cardDeck.image}
+              alt={cardDeck.name}
+              data-id={index}
+            />
+            <h2 className="character_name">{cardDeck.name}</h2>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   ));
 

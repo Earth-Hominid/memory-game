@@ -209,7 +209,7 @@ body {
 
 .score_heading {
   color: #f6f7f9;
-  font-size: 1.4em;
+  font-size: calc(0.10526vw + 0.97368rem);
 }
 
 .score {
@@ -229,15 +229,26 @@ body {
   margin: auto;
 }
 
-.card {
+.cards {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.tarts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tart {
+  flex: 0 1 calc(25% - 1em);
 }
 
 .image_holder {
-  width: 250px;
-  padding: 5px;
+  width: 13rem;
+  padding: 0.5em;
+  height: auto;
   margin: 30px;
   background-color: #16181d;
   border-radius: 10px;
@@ -246,7 +257,7 @@ body {
 }
 
 .character_image {
-  width: 220px;
+  width: 12rem;
   height: auto;
   margin: 10px auto 5px auto;
 }
