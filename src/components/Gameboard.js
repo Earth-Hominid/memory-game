@@ -1,33 +1,40 @@
-import { useState, useEffect } from 'react';
-import data from './utils/data';
 import Cards from './Cards';
 
-const startingGameWidth = 4;
-const cardDeck = data;
+const Gameboard = ({ cardDeck, onDoubleClick }) => {
+  // const [shuffledGameOrder, setShuffledGameOrder] = useState([]);
 
-const Gameboard = () => {
-  const [startingCardOrder, setStartingCardOrder] = useState([]);
+  // const [cards, setCards] = useState([]);
 
-  const createStartingBoard = () => {
-    const randomCardOrder = [];
+  // const [levelDisplay, setLevelDisplay] = useState(1);
+  // const [highscoreDisplay, setHighscoreDisplay] = useState(0);
 
-    for (let i = 0; i < startingGameWidth; i++) {
-      const randomCard = cardDeck[Math.floor(Math.random() * cardDeck.length)];
-      randomCardOrder.push(randomCard);
-    }
-    setStartingCardOrder(randomCardOrder);
-  };
+  // const removeCard = (id) => {
+  //   setCards(cards.filter((card) => card.id !== id));
+  // };
 
-  // Use effect used to create the starting board on initial load.
-  useEffect(() => {
-    createStartingBoard();
-  }, []);
+  // const shuffle = (cards) => {
+  //   const shuffledCardOrder = [];
+
+  //   for (let i = 0; i < cards.length; i++) {
+  //     const randomCard = cards[Math.floor(Math.random() * cards.length)];
+  //     shuffledCardOrder.push(randomCard);
+  //   }
+  //   setShuffledGameOrder(shuffledCardOrder);
+  // };
+
+  // useEffect(() => {
+  //   shuffle();
+  // }, [shuffle]);
 
   return (
     <div className="game_area">
       <div className="game_board">
         <section className="cards">
-          <Cards cardDeck={startingCardOrder} />
+          <Cards
+            cardDeck={cardDeck}
+            onDoubleClick={onDoubleClick}
+            // shuffledOrder={shuffledGameOrder}
+          />
         </section>
       </div>
     </div>

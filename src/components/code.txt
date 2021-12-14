@@ -1,0 +1,54 @@
+Psuedo Code Game Logic
+
+Initial state is saved in cardArray. ie cardArray = [ card1, card2, card3, card4 ]
+
+  [cardArray, setCardArray] = useState[initalCardArray]
+
+When a card is double clicked:
+
+
+
+
+1. Check if the card is equal to cardArray[0]
+
+    const onCardSelected = () => {
+        const selected card = clicked on card
+        if (selected card === cardArray[0]) {
+          setScore = useState(score) + 1
+
+
+
+
+
+
+        } 
+    }
+        1.1 If true ==>
+                1.1.1 Increase current score by one.
+                1.1.2 Check if current score is greater than highest score ==>
+                        1.1.2.1 If true, set highest score === current score.
+                        1.1.2.2 If false, return 
+                1.1.3 Remove card from cardArray
+                1.1.4 Check If cardArray is empty ==> 
+                        1.1.4.1 If true ==>
+                        1.1.4.1.1 Increase current level by one.
+                        1.1.4.1.2 Check if current level === maximum lvl ===>
+                                1.1.4.1.2.1 If true, congraulations you have beat the game, end game. 
+                                1.1.4.1.2.2 If false, return
+                        1.1.4.2 If false, return
+
+               1.1.5 ==> 
+                      1.1.5.1 Shuffle the order of the new cardArray
+                      1.1.5.2 Save the order in state
+                      1.1.5.3 loop through cardArray and Dynamically rerender remaining cards.              
+        
+        
+        
+        
+        
+        1.2 If false ==>
+                        else {
+                                  End Game
+                                  Display Final Score Board (Final scoreboard has play again button). 
+                                        Use set timeout to sequential fill in scores and lvls etc.
+                                }

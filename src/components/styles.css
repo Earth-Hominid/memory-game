@@ -1,3 +1,13 @@
+@font-face {
+  font-family: rubik;
+  src: url(./fonts/Rubik/Rubik-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: roboto;
+  src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
+
 *,
 *::before,
 *::after {
@@ -192,7 +202,10 @@ body {
 
 .quote {
   color: #f6f7f9;
-  font-size: 2.5em;
+  font-size: 2.2em;
+  text-align: center;
+  font-family: rubik, helvetica, arial, sans-serif;
+  cursor: pointer;
 }
 
 .score_wrapper {
@@ -210,11 +223,13 @@ body {
 .score_heading {
   color: #f6f7f9;
   font-size: calc(0.10526vw + 0.97368rem);
+  font-family: roboto;
 }
 
 .score {
   color: #d3af37;
   font-size: 2em;
+  font-family: roboto;
 }
 
 .game_area {

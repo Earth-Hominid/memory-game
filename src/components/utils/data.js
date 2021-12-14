@@ -20,7 +20,12 @@ import vision from '../images/vision.png';
 import wolverine from '../images/wolverine.png';
 
 const data = [
-  { id: 1, name: 'Ant Man', image: antman },
+  {
+    id: 1,
+    name: 'Ant Man',
+    image: antman,
+  },
+
   { id: 2, name: 'Black Panther', image: blackPanther },
   { id: 3, name: 'Black Widow', image: blackWidow },
   { id: 4, name: 'Captain America', image: captainAmerica },
