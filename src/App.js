@@ -1,7 +1,7 @@
-import Controller from './components/Controller';
+import GamePlayLogic from './components/GamePlayLogic';
 
 const App = () => {
-  return <Controller />;
+  return <GamePlayLogic />;
 };
 
 export default App;

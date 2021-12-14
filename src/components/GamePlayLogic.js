@@ -8,6 +8,10 @@ import FinalScoreBoard from './endgame/FinalScoreBoard';
 
 function Controller() {
   const [step, setStep] = useState(1);
+  const [score, setScore] = useState(0);
+  const [level, setLevel] = useState(1);
+  const [highscore, setHighscore] = useState(0);
+  const [highlevel, setHighlevel] = useState(0);
 
   // Proceed to next step
   const nextStep = () => setStep(step + 1);
@@ -32,7 +36,12 @@ function Controller() {
     case 3:
       return (
         <>
-          <Scoreboard />
+          <Scoreboard
+            score={score}
+            level={level}
+            highscore={highscore}
+            highlevel={highlevel}
+          />
           <Gameboard />
         </>
       );

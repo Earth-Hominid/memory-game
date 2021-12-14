@@ -4,7 +4,7 @@ import Quotes from './Quotes';
 
 const startingQuote = 1;
 
-const Scoreboard = () => {
+const Scoreboard = ({ score, level, highscore, highlevel }) => {
   const [randomQuote, setRandomQuote] = useState([]);
 
   const getRandomQuote = () => {
@@ -32,20 +32,20 @@ const Scoreboard = () => {
             <Quotes randomQuote={randomQuote} getNewQuote={getNewQuote} />
             <div className="score_wrapper">
               <div className="score_container">
-                <h3 className="score_heading">SCORE</h3>
-                <h3 className="score">1</h3>
+                <h3 className="score_heading">LEVEL</h3>
+                <h3 className="score">{level}</h3>
               </div>
               <div className="score_container">
-                <h3 className="score_heading">LEVEL</h3>
-                <h3 className="score">1</h3>
+                <h3 className="score_heading">SCORE</h3>
+                <h3 className="score">{score}</h3>
               </div>
               <div className="score_container">
                 <h3 className="score_heading">HIGHEST SCORE</h3>
-                <h3 className="score">1</h3>
+                <h3 className="score">{highscore}</h3>
               </div>
               <div className="score_container">
                 <h3 className="score_heading">HIGHEST LEVEL</h3>
-                <h3 className="score">1</h3>
+                <h3 className="score">{highlevel}</h3>
               </div>
             </div>
           </div>
