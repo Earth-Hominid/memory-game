@@ -6,7 +6,7 @@ import Scoreboard from './scoreboard/Scoreboard';
 import Gameboard from './gameboard/Gameboard';
 import FinalScoreBoard from './endgame/FinalScoreBoard';
 
-function Controller() {
+function GamePlayLogic() {
   const [step, setStep] = useState(1);
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(1);
@@ -56,4 +56,4 @@ function Controller() {
   }
 }
 
-export default Controller;
+export default GamePlayLogic;
