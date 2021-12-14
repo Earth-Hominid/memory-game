@@ -1,4 +1,4 @@
-import logo from './images/memory.png';
+import logo from '../assets/images/memory.png';
 
 const Nav = () => {
   return (

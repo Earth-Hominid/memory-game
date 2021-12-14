@@ -1,23 +1,18 @@
-const quoteData = [
-  { id: 1, quote: 'Oh, My Stars and Garters!' },
-  { id: 2, quote: 'Flame On!' },
-  { id: 3, quote: 'I Am Groot' },
-  { id: 4, quote: 'With Great Power...' },
-  { id: 5, quote: 'The Best There Is...' },
-  { id: 6, quote: 'Have at Thee!' },
-  { id: 7, quote: 'I Am Iron Man' },
-  { id: 8, quote: 'By the Bristling Beard of Odin!' },
-  { id: 9, quote: 'Sweet Christmas!' },
-  { id: 10, quote: 'Bamf!' },
-  { id: 11, quote: '...Hope You Survive the Experience!' },
-  { id: 12, quote: `It's Clobberin' Time!` },
-  { id: 13, quote: 'And There Came a Day Unlike Any Other...' },
-  { id: 14, quote: 'By the Hoary Host of Hoggoth!' },
-  { id: 15, quote: 'Higher, Further, Faster, Baby!' },
-  {
-    id: 16,
-    quote: 'You Gotta Go Through me!',
-  },
+const quotes = [
+  { quote: 'Oh, My Stars and Garters!' },
+  { quote: 'Flame On!' },
+  { quote: 'I Am Groot' },
+  { quote: 'With Great Power...' },
+  { quote: 'The Best There Is...' },
+  { quote: 'Have at Thee!' },
+  { quote: 'I Am Iron Man' },
+  { quote: 'By the Bristling Beard of Odin!' },
+  { quote: 'Sweet Christmas!' },
+  { quote: 'Bamf!' },
+  { quote: '...Hope You Survive the Experience!' },
+  { quote: `It's Clobberin' Time!` },
+  { quote: 'And There Came a Day Unlike Any Other...' },
+  { quote: 'By the Hoary Host of Hoggoth!' },
 ];
 
-export default quoteData;
+export default quotes;

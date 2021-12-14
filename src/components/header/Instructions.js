@@ -3,10 +3,9 @@ const Instructions = ({ nextStep }) => {
     <div>
       <div className="card_header">
         <h2 className="text_header">
-          Your task is to remember the playing cards original positions and
-          select them in order by double clicking. The cards will shuffle on
-          every click. Good Luck!
-        </h2>
+          Remember the playing cards original positions and select them in order
+          by double clicking. The cards will shuffle on every click. Good Luck!
+        </h2>{' '}
       </div>
 
       <div className="welcome_button_holder">

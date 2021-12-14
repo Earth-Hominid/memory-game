@@ -1,11 +1,11 @@
 @font-face {
   font-family: rubik;
-  src: url(./fonts/Rubik/Rubik-SemiBold.ttf);
+  src: url(./assets/fonts/Rubik/Rubik-SemiBold.ttf);
 }
 
 @font-face {
   font-family: roboto;
-  src: url(./fonts/Roboto/Roboto-Regular.ttf);
+  src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
 }
 
 *,
@@ -179,7 +179,7 @@ body {
 
 .score_board::after {
   content: '';
-  background-image: url('./images/marvel_comp.jpg');
+  background-image: url('./assets/images/marvel_comp.jpg');
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.3;

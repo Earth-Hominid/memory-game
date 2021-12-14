@@ -1,9 +1,9 @@
 import Card from './Card';
 
-const Cards = ({ cardDeck }) => {
+const Cards = ({ dealtCards }) => {
   return (
     <>
-      {cardDeck.map((card, index) => (
+      {dealtCards.map((card, index) => (
         <>
           <Card key={index} card={card} />
         </>

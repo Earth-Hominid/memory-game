@@ -1,31 +1,26 @@
-import antman from '../images/ant_man.png';
-import blackPanther from '../images/black_panther.png';
-import blackWidow from '../images/blackwidow.png';
-import captainAmerica from '../images/captain_america.png';
-import captainMarvel from '../images/captain_marvel.png';
-import drDoom from '../images/drdoom.png';
-import drOctopus from '../images/droctopus.png';
-import hawkeye from '../images/hawkeye.png';
-import hela from '../images/hela.png';
-import hulk from '../images/hulk.png';
-import ironman from '../images/ironman.png';
-import juggernaut from '../images/juggernaut.png';
-import redHulk from '../images/red_hulk.png';
-import spidermanTwo from '../images/spiderman_2.png';
-import spiderman from '../images/spiderman.png';
-import thor from '../images/thor.png';
-import thorTwo from '../images/thor_2.png';
-import venom from '../images/venom.png';
-import vision from '../images/vision.png';
-import wolverine from '../images/wolverine.png';
+import antman from '../assets/images/ant_man.png';
+import blackPanther from '../assets/images/black_panther.png';
+import blackWidow from '../assets/images/blackwidow.png';
+import captainAmerica from '../assets/images/captain_america.png';
+import captainMarvel from '../assets/images/captain_marvel.png';
+import drDoom from '../assets/images/drdoom.png';
+import drOctopus from '../assets/images/droctopus.png';
+import hawkeye from '../assets/images/hawkeye.png';
+import hela from '../assets/images/hela.png';
+import hulk from '../assets/images/hulk.png';
+import ironman from '../assets/images/ironman.png';
+import juggernaut from '../assets/images/juggernaut.png';
+import redHulk from '../assets/images/red_hulk.png';
+import spidermanTwo from '../assets/images/spiderman_2.png';
+import spiderman from '../assets/images/spiderman.png';
+import thor from '../assets/images/thor.png';
+import thorTwo from '../assets/images/thor_2.png';
+import venom from '../assets/images/venom.png';
+import vision from '../assets/images/vision.png';
+import wolverine from '../assets/images/wolverine.png';
 
 const data = [
-  {
-    id: 1,
-    name: 'Ant Man',
-    image: antman,
-  },
-
+  { id: 1, name: 'Ant Man', image: antman },
   { id: 2, name: 'Black Panther', image: blackPanther },
   { id: 3, name: 'Black Widow', image: blackWidow },
   { id: 4, name: 'Captain America', image: captainAmerica },

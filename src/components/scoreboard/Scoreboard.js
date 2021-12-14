@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import quoteData from './utils/quotes';
+import quoteData from '../utils/quotes';
 import Quotes from './Quotes';
 
 const startingQuote = 1;
