@@ -1,17 +1,38 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Nav from './header/Nav';
 import Welcome from './header/Welcome';
 import Instructions from './header/Instructions';
 import Scoreboard from './scoreboard/Scoreboard';
 import Gameboard from './gameboard/Gameboard';
 import FinalScoreBoard from './endgame/FinalScoreBoard';
+import data from './utils/data';
+
+const deckOfCards = data;
 
 function GamePlayLogic() {
+  const [cardDealtOrder, setCardDealtOrder] = useState([]);
   const [step, setStep] = useState(1);
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(1);
   const [highscore, setHighscore] = useState(0);
   const [highlevel, setHighlevel] = useState(0);
+  const [levelCardAmount, setLevelCardAmount] = useState(4);
+
+  const dealCards = () => {
+    const cardsDealt = [];
+
+    for (let i = 0; i < levelCardAmount; i++) {
+      const randomCard =
+        deckOfCards[Math.floor(Math.random() * deckOfCards.length)];
+
+      cardsDealt.push(randomCard);
+    }
+    setCardDealtOrder(cardsDealt);
+  };
+
+  useEffect(() => {
+    dealCards();
+  }, []);
 
   // Proceed to next step
   const nextStep = () => setStep(step + 1);
@@ -42,7 +63,7 @@ function GamePlayLogic() {
             highscore={highscore}
             highlevel={highlevel}
           />
-          <Gameboard />
+          <Gameboard cardDealtOrder={cardDealtOrder} />
         </>
       );
     case 4:
