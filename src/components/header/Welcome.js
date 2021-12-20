@@ -3,13 +3,9 @@ const Welcome = ({ nextStep }) => {
     <div>
       <div className="card_header">
         <h2 className="welcome_header">
-          Even though the sound of it,
+          Even though the sound of it, is something quite atrocious,
           <br></br>
-          is something quite atrocious.
-          <br></br>
-          If you say it loud enough,
-          <br></br>
-          you'll always sound precocious.
+          If you say it loud enough, you'll always sound precocious.
           <br></br>
         </h2>
       </div>

@@ -17,6 +17,7 @@ function GamePlayLogic() {
   const [highscore, setHighscore] = useState(0);
   const [highlevel, setHighlevel] = useState(0);
   const [levelCardAmount, setLevelCardAmount] = useState(4);
+  const [selected, setSelected] = useState(false);
 
   const dealCards = () => {
     const cardsDealt = [];
@@ -38,6 +39,52 @@ function GamePlayLogic() {
   const nextStep = () => setStep(step + 1);
   // Go back to prev step
   const prevStep = () => setStep(step - 1);
+  // Increase score
+  const increaseScore = () => setScore(score + 1);
+  // Increase level
+  const increaseLevel = () => setLevel(level + 1);
+  // Increase cards dealt
+  const increaseCards = () => setLevelCardAmount(levelCardAmount + 2);
+  // Check highscore
+  const checkHighScore = () => {
+    if (score > highscore) {
+      setHighscore(score);
+    }
+  };
+  // Check if highest level
+  const checkHighLevel = () => {
+    if (level > highlevel) {
+      setHighlevel(level);
+    }
+  };
+
+  const handleClick = (id) => {
+    shuffleDeck();
+    handleScore();
+  };
+
+  const handleScore = (id) => {
+    cardDealtOrder.forEach((element) => {
+      if (id === element.id && element.clicked === false) {
+        element.clicked = true;
+        setSelected(false);
+        updateScoreboard();
+      }
+    });
+  };
+  const updateScoreboard = (id) => {
+    increaseScore();
+    increaseLevel();
+    checkHighScore();
+    checkHighLevel();
+  };
+
+  const newDeal = () => {
+    increaseCards();
+    dealCards();
+  };
+
+  const shuffleDeck = () => {};
 
   switch (step) {
     case 1:
