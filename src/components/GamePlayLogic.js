@@ -80,6 +80,7 @@ function GamePlayLogic() {
   const handleClick = (id) => {
     shuffleDeck();
     handleScore();
+    getNewQuote();
   };
 
   const handleScore = (id) => {
