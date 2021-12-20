@@ -1,6 +1,11 @@
-const Card = ({ card }) => {
+const Card = ({ card, handleClick }) => {
   return (
-    <div className="image_holder" data-id={card.id}>
+    <div
+      className="image_holder"
+      data-id={card.id}
+      onClick={handleClick}
+      key={card.id}
+    >
       <img
         className="character_image"
         key={card.id}

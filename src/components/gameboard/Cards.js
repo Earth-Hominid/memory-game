@@ -1,11 +1,11 @@
 import Card from './Card';
 
-const Cards = ({ dealtCards }) => {
+const Cards = ({ dealtCards, handleClick }) => {
   return (
     <>
       {dealtCards.map((card, index) => (
         <>
-          <Card key={index} card={card} />
+          <Card key={index} card={card} handleClick={handleClick} />
         </>
       ))}
     </>
