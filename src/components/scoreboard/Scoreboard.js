@@ -1,29 +1,13 @@
-import { useEffect, useState } from 'react';
-import quoteData from '../utils/quotes';
 import Quotes from './Quotes';
 
-const startingQuote = 1;
-
-const Scoreboard = ({ score, level, highscore, highlevel }) => {
-  const [randomQuote, setRandomQuote] = useState([]);
-
-  const getRandomQuote = () => {
-    const randomQuote = [];
-
-    for (let i = 0; i < startingQuote; i++) {
-      const quote = quoteData[Math.floor(Math.random() * quoteData.length)];
-      randomQuote.push(quote);
-    }
-    setRandomQuote(randomQuote);
-  };
-
-  // Use effect used to get random quote and dynamically update if it changes.
-  useEffect(() => {
-    getRandomQuote();
-  }, []);
-
-  const getNewQuote = () => getRandomQuote();
-
+const Scoreboard = ({
+  score,
+  level,
+  highscore,
+  highlevel,
+  randomQuote,
+  getNewQuote,
+}) => {
   return (
     <>
       <div className="board_area">

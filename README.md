@@ -8,7 +8,7 @@ A memory game in which the player is shown randomly selected cards. Upon startin
 
 This application is built with the React framework, utilizing functional components and React Hooks.
 
-[Live Demo](https://earth-hominid.github.io/Memory-Game/) :point_left:
+[Live Demo](https://earth-hominid.github.io/Memory-Game/)
 
 ## Install
 
