@@ -5,23 +5,20 @@ import Instructions from './header/Instructions';
 import Scoreboard from './scoreboard/Scoreboard';
 import Gameboard from './gameboard/Gameboard';
 import FinalScoreBoard from './endgame/FinalScoreBoard';
-import data from './utils/data';
+import deckOfCards from './utils/deckOfCards';
 import quoteData from './utils/quotes';
-const deckOfCards = data;
 const startingQuote = 1;
 
-function GamePlayLogic() {
-  const [cardDealtOrder, setCardDealtOrder] = useState([]);
-  const [remainingCardOrder, setRemainingCardOrder] = useState(cardDealtOrder);
-  const [selectedCards, setSelectedCards] = useState([]);
+function PlayRound() {
   const [step, setStep] = useState(1);
   const [score, setScore] = useState(0);
   const [level, setLevel] = useState(1);
   const [highscore, setHighscore] = useState(0);
   const [highlevel, setHighlevel] = useState(0);
   const [levelCardAmount, setLevelCardAmount] = useState(4);
-  const [selected, setSelected] = useState(false);
   const [randomQuote, setRandomQuote] = useState([]);
+  const [cards, setCards] = useState([]);
+  const [clickedCards, setClickedCards] = useState([]);
 
   const getRandomQuote = () => {
     const randomQuote = [];
@@ -39,42 +36,6 @@ function GamePlayLogic() {
   }, []);
 
   const getNewQuote = () => getRandomQuote();
-
-  const dealCards = () => {
-    const cardsDealt = [];
-
-    for (let i = 0; i < levelCardAmount; i++) {
-      const randomCard =
-        deckOfCards[Math.floor(Math.random() * deckOfCards.length)];
-
-      cardsDealt.push(randomCard);
-    }
-    setCardDealtOrder(cardsDealt);
-  };
-
-  useEffect(() => {
-    dealCards();
-  }, []);
-
-  // Check if card is equal to setRemainingCardOrder[0].
-  const checkMatch = (e) => {
-    const marvelCharacter = e.target.parentNode.lastChild.textContent;
-    const matchingCard = remainingCardOrder[0].name;
-    // if true
-    if (marvelCharacter === matchingCard) {
-      //increase score, set new highscore if needed
-      updateScoreboard();
-      // remove card from cardArray
-      removeCard();
-    } else return;
-  };
-
-  const removeCard = (card) => {
-    const cardToRemove = remainingCardOrder[0];
-    const remainingCards = remainingCardOrder.filter((card) => cardToRemove);
-    setRemainingCardOrder(remainingCards);
-  };
-
   // Proceed to next step
   const nextStep = () => setStep(step + 1);
   // Go back to prev step
@@ -91,13 +52,6 @@ function GamePlayLogic() {
       setHighscore(score);
     } else return;
   };
-  // Start new game
-  const startNewGame = () => {
-    setSelectedCards([]);
-    setScore(0);
-    setLevel(1);
-  };
-
   // Check if highest level
   const checkHighLevel = () => {
     if (level > highlevel) {
@@ -105,31 +59,6 @@ function GamePlayLogic() {
     }
   };
 
-  const handleClick = (e) => {
-    const marvelCharacter = e.target.parentNode.lastChild.textContent;
-    const matchingCard = cardDealtOrder[0].name;
-    if (marvelCharacter === matchingCard) {
-      updateScoreboard();
-      removeCard();
-    } else return;
-    // shuffleDeck();
-    // handleScore();
-    // getNewQuote();
-  };
-
-  // const play = (marvelCharacter) => {
-  //   if (marvelCharacter === )
-  // }
-
-  const handleScore = (id) => {
-    cardDealtOrder.forEach((element) => {
-      if (id === element.id && element.selected === false) {
-        element.selected = true;
-        setSelected(false);
-        updateScoreboard();
-      }
-    });
-  };
   const updateScoreboard = () => {
     increaseScore();
     increaseLevel();
@@ -137,20 +66,41 @@ function GamePlayLogic() {
     checkHighLevel();
   };
 
-  const newDeal = () => {
-    increaseCards();
-    dealCards();
-  };
-
-  const shuffleDeck = () => {
-    // Shuffle the dealt cards
-    const shuffledCardDeck = shuffle(cardDealtOrder);
-    // set the dealt card new state
-    setCardDealtOrder(shuffledCardDeck);
-  };
-
   const shuffle = (array) => {
     return [...array].sort(() => Math.random() - 0.5);
+  };
+
+  // Cards dealt restricted to current game level and no duplicate cards can be dealt.
+  const dealCards = () => {
+    let newCards = shuffle(deckOfCards);
+    newCards.splice(levelCardAmount);
+    setCards(newCards);
+  };
+
+  useEffect(() => {
+    dealCards();
+  }, []);
+
+  const playRound = (marvelCharacter) => {
+    if (clickedCards.includes(marvelCharacter)) {
+      checkHighScore();
+      resetGame();
+    } else {
+      increaseScore();
+      setClickedCards((prevState) => [...prevState, marvelCharacter]);
+      checkHighScore();
+    }
+  };
+
+  const resetGame = () => {
+    setClickedCards([]);
+    setScore(0);
+  };
+
+  const handleClick = (e) => {
+    const marvelCharacter = e.target.parentNode.lastChild.textContent;
+    playRound(marvelCharacter);
+    setCards(shuffle(cards));
   };
 
   switch (step) {
@@ -179,11 +129,7 @@ function GamePlayLogic() {
             randomQuote={randomQuote}
             getNewQuote={getNewQuote}
           />
-          <Gameboard
-            cardDealtOrder={cardDealtOrder}
-            selected={selected}
-            handleClick={handleClick}
-          />
+          <Gameboard cards={cards} handleClick={handleClick} />
         </>
       );
     case 4:
@@ -197,4 +143,4 @@ function GamePlayLogic() {
   }
 }
 
-export default GamePlayLogic;
+export default PlayRound;

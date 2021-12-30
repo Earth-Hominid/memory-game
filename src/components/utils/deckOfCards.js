@@ -11,15 +11,13 @@ import hulk from '../assets/images/hulk.png';
 import ironman from '../assets/images/ironman.png';
 import juggernaut from '../assets/images/juggernaut.png';
 import redHulk from '../assets/images/red_hulk.png';
-import spidermanTwo from '../assets/images/spiderman_2.png';
-import spiderman from '../assets/images/spiderman.png';
-import thor from '../assets/images/thor.png';
-import thorTwo from '../assets/images/thor_2.png';
+import spiderman from '../assets/images/spiderman_2.png';
+import thor from '../assets/images/thor_2.png';
 import venom from '../assets/images/venom.png';
 import vision from '../assets/images/vision.png';
 import wolverine from '../assets/images/wolverine.png';
 
-const data = [
+const deckOfCards = [
   { id: 1, name: 'Ant Man', image: antman, selected: false },
   { id: 2, name: 'Black Panther', image: blackPanther, selected: false },
   { id: 3, name: 'Black Widow', image: blackWidow, selected: false },
@@ -33,13 +31,11 @@ const data = [
   { id: 11, name: 'Iron Man', image: ironman, selected: false },
   { id: 12, name: 'Juggernaut', image: juggernaut, selected: false },
   { id: 13, name: 'Red Hulk', image: redHulk, selected: false },
-  { id: 14, name: 'Spider-Man', image: spidermanTwo, selected: false },
-  { id: 15, name: 'Spider-Man', image: spiderman, selected: false },
-  { id: 16, name: 'Thor', image: thor, selected: false },
-  { id: 17, name: 'Thor', image: thorTwo, selected: false },
-  { id: 18, name: 'Venom', image: venom, selected: false },
-  { id: 19, name: 'Vision', image: vision, selected: false },
-  { id: 20, name: 'Wolverine', image: wolverine, selected: false },
+  { id: 14, name: 'Spider-Man', image: spiderman, selected: false },
+  { id: 15, name: 'Thor', image: thor, selected: false },
+  { id: 16, name: 'Venom', image: venom, selected: false },
+  { id: 17, name: 'Vision', image: vision, selected: false },
+  { id: 18, name: 'Wolverine', image: wolverine, selected: false },
 ];
 
-export default data;
+export default deckOfCards;

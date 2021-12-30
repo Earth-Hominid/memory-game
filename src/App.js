@@ -1,7 +1,7 @@
-import GamePlayLogic from './components/GamePlayLogic';
+import PlayRound from './components/PlayRound';
 
 const App = () => {
-  return <GamePlayLogic />;
+  return <PlayRound />;
 };
 
 export default App;

@@ -1,11 +1,11 @@
 import Cards from './Cards';
 
-const Gameboard = ({ cardDealtOrder, handleClick }) => {
+const Gameboard = ({ cards, handleClick }) => {
   return (
     <div className="game_area">
       <div className="game_board">
         <section className="cards">
-          <Cards dealtCards={cardDealtOrder} handleClick={handleClick} />
+          <Cards dealtCards={cards} handleClick={handleClick} />
         </section>
       </div>
     </div>
