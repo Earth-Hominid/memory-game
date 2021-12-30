@@ -2,10 +2,10 @@ import GameOver from './GameOver';
 import GameScore from './GameScore';
 import PlayAgain from './PlayAgain';
 
-const FinalScoreBoard = () => {
+const FinalScoreBoard = ({ score, level, highscore, highlevel }) => {
   return (
     <div>
-      <GameOver />
+      <GameOver score={score} />
       <GameScore />
       <PlayAgain />
     </div>

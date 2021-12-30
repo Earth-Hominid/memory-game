@@ -103,6 +103,14 @@ function PlayRound() {
     setCards(shuffle(cards));
   };
 
+  //Start new game
+  const startNewGame = () => {
+    setClickedCards([]);
+    setScore(0);
+    setLevel(1);
+    prevStep();
+  };
+
   switch (step) {
     case 1:
       return (
@@ -135,7 +143,11 @@ function PlayRound() {
     case 4:
       return (
         <>
-          <FinalScoreBoard />
+          <FinalScoreBoard
+            score={score}
+            highscore={highscore}
+            highlevel={highlevel}
+          />
         </>
       );
     default:

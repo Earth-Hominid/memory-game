@@ -8,6 +8,11 @@
   src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
 }
 
+@font-face {
+  font-family: comic;
+  src: url(./assets//fonts/Comic_Neue/ComicNeue-Bold.ttf);
+}
+
 *,
 *::before,
 *::after {
@@ -270,4 +275,31 @@ body {
 .character_name {
   color: #f6f7f9;
   font-size: 1.25em;
+}
+
+.game-over {
+  font-family: comic;
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.final-results {
+  font-family: comic;
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.play-again {
+  font-family: comic;
+  font-size: 4rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  background-color: #087ea4;
+  border-radius: 20px;
+  padding: 1.5rem;
 }

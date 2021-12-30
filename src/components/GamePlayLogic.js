@@ -56,25 +56,6 @@ function GamePlayLogic() {
     dealCards();
   }, []);
 
-  // Check if card is equal to setRemainingCardOrder[0].
-  const checkMatch = (e) => {
-    const marvelCharacter = e.target.parentNode.lastChild.textContent;
-    const matchingCard = remainingCardOrder[0].name;
-    // if true
-    if (marvelCharacter === matchingCard) {
-      //increase score, set new highscore if needed
-      updateScoreboard();
-      // remove card from cardArray
-      removeCard();
-    } else return;
-  };
-
-  const removeCard = (card) => {
-    const cardToRemove = remainingCardOrder[0];
-    const remainingCards = remainingCardOrder.filter((card) => cardToRemove);
-    setRemainingCardOrder(remainingCards);
-  };
-
   // Proceed to next step
   const nextStep = () => setStep(step + 1);
   // Go back to prev step
