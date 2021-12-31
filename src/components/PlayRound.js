@@ -84,7 +84,7 @@ function PlayRound() {
   const playRound = (marvelCharacter) => {
     if (clickedCards.includes(marvelCharacter)) {
       checkHighScore();
-      resetGame();
+      endGame();
     } else {
       increaseScore();
       setClickedCards((prevState) => [...prevState, marvelCharacter]);
@@ -92,9 +92,8 @@ function PlayRound() {
     }
   };
 
-  const resetGame = () => {
-    setClickedCards([]);
-    setScore(0);
+  const endGame = () => {
+    nextStep();
   };
 
   const handleClick = (e) => {
@@ -106,8 +105,14 @@ function PlayRound() {
   //Start new game
   const startNewGame = () => {
     setClickedCards([]);
+    setLevelCardAmount(4);
     setScore(0);
     setLevel(1);
+  };
+
+  // Play new game
+  const handlePlayAgainClick = () => {
+    startNewGame();
     prevStep();
   };
 
@@ -147,6 +152,7 @@ function PlayRound() {
             score={score}
             highscore={highscore}
             highlevel={highlevel}
+            handleClick={handlePlayAgainClick}
           />
         </>
       );

@@ -1,14 +1,15 @@
 import GameOver from './GameOver';
-import GameScore from './GameScore';
-import PlayAgain from './PlayAgain';
 
-const FinalScoreBoard = ({ score, level, highscore, highlevel }) => {
+const FinalScoreBoard = ({ score, highscore, highlevel, handleClick }) => {
   return (
-    <div>
-      <GameOver score={score} />
-      <GameScore />
-      <PlayAgain />
-    </div>
+    <>
+      <GameOver
+        score={score}
+        highscore={highscore}
+        highlevel={highlevel}
+        handleClick={handleClick}
+      />
+    </>
   );
 };
 
