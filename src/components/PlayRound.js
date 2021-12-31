@@ -67,6 +67,12 @@ function PlayRound() {
     return [...array].sort(() => Math.random() - 0.5);
   };
 
+  const dealNewGame = () => {
+    let newCards = shuffle(deckOfCards);
+    newCards.splice(4);
+    setCards(newCards);
+    setLevelCardAmount(4);
+  };
   // Cards dealt restricted to current game level and no duplicate cards can be dealt.
   const dealCards = () => {
     let newCards = shuffle(deckOfCards);
@@ -88,15 +94,19 @@ function PlayRound() {
       checkHighScore();
       setClickedCards((prevState) => [...prevState, marvelCharacter]);
       checkHighLevel();
+      console.log('increase score');
       if (clickedCards.length === cards.length - 1) {
         startNextLevel();
+        console.log('increase level');
       } else {
         setCards(shuffle(cards));
+        console.log('cards shuffled');
       }
     } else {
       checkHighScore();
       checkHighLevel();
       endGame();
+      console.log('game over');
     }
   };
   const endGame = () => {
@@ -128,7 +138,9 @@ function PlayRound() {
     setScore(0);
     setLevel(1);
     getNewQuote();
-    dealNextLevel();
+    dealNewGame();
+    console.log(levelCardAmount);
+    console.log('new game dealt');
   };
 
   // Play new game
