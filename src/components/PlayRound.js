@@ -8,6 +8,7 @@ import FinalScoreBoard from './endgame/FinalScoreBoard';
 import deckOfCards from './utils/deckOfCards';
 import quoteData from './utils/quotes';
 const startingQuote = 1;
+const maxCardLevel = 18;
 
 function PlayRound() {
   const [step, setStep] = useState(1);
@@ -35,7 +36,10 @@ function PlayRound() {
     getRandomQuote();
   }, []);
 
+  // Get random quote
   const getNewQuote = () => getRandomQuote();
+  // Increase the level
+  const dealNextLevel = () => dealCards();
   // Proceed to next step
   const nextStep = () => setStep(step + 1);
   // Go back to prev step
@@ -59,13 +63,6 @@ function PlayRound() {
     }
   };
 
-  const updateScoreboard = () => {
-    increaseScore();
-    increaseLevel();
-    checkHighScore();
-    checkHighLevel();
-  };
-
   const shuffle = (array) => {
     return [...array].sort(() => Math.random() - 0.5);
   };
@@ -81,19 +78,27 @@ function PlayRound() {
     dealCards();
   }, []);
 
+  // const playerHasClickedAllCards = (number) => {
+  //   clickedCards.length === number - 1;
+  // };
+
   const playRound = (marvelCharacter) => {
-    if (clickedCards.includes(marvelCharacter)) {
+    if (!clickedCards.includes(marvelCharacter)) {
+      increaseScore();
+      checkHighScore();
+      setClickedCards((prevState) => [...prevState, marvelCharacter]);
+      checkHighLevel();
+      if (clickedCards.length === cards.length - 1) {
+        startNextLevel();
+      } else {
+        setCards(shuffle(cards));
+      }
+    } else {
       checkHighScore();
       checkHighLevel();
       endGame();
-    } else {
-      increaseScore();
-      setClickedCards((prevState) => [...prevState, marvelCharacter]);
-      checkHighScore();
-      checkHighLevel();
     }
   };
-
   const endGame = () => {
     nextStep();
   };
@@ -101,16 +106,29 @@ function PlayRound() {
   const handleClick = (e) => {
     const marvelCharacter = e.target.parentNode.lastChild.textContent;
     playRound(marvelCharacter);
-    setCards(shuffle(cards));
+  };
+
+  // Reset clicked cards
+  const clearClickedCards = () => setClickedCards([]);
+
+  // Start new level
+  const startNextLevel = () => {
+    checkHighScore();
+    clearClickedCards();
+    increaseLevel();
+    increaseCards();
+    getNewQuote();
+    dealNextLevel();
   };
 
   //Start new game
   const startNewGame = () => {
-    setClickedCards([]);
+    clearClickedCards();
     setLevelCardAmount(4);
     setScore(0);
     setLevel(1);
     getNewQuote();
+    dealNextLevel();
   };
 
   // Play new game
