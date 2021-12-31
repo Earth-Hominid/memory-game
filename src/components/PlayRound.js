@@ -84,11 +84,13 @@ function PlayRound() {
   const playRound = (marvelCharacter) => {
     if (clickedCards.includes(marvelCharacter)) {
       checkHighScore();
+      checkHighLevel();
       endGame();
     } else {
       increaseScore();
       setClickedCards((prevState) => [...prevState, marvelCharacter]);
       checkHighScore();
+      checkHighLevel();
     }
   };
 
@@ -108,6 +110,7 @@ function PlayRound() {
     setLevelCardAmount(4);
     setScore(0);
     setLevel(1);
+    getNewQuote();
   };
 
   // Play new game
