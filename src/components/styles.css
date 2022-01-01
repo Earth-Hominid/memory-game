@@ -266,6 +266,7 @@ body {
   background-color: #16181d;
   border-radius: 10px;
   position: relative;
+  text-align: center;
 }
 
 .image_holder:hover {
