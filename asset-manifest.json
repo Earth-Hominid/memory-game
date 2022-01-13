@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/Memory-Game/static/css/main.6371208a.css",
+    "main.js": "/Memory-Game/static/js/main.2803d2d7.js",
+    "static/media/thor_2.png": "/Memory-Game/static/media/thor_2.5cc058fb8fabc6ee578e.png",
+    "static/media/droctopus.png": "/Memory-Game/static/media/droctopus.6f15c4c0949fe337f9f5.png",
+    "static/media/juggernaut.png": "/Memory-Game/static/media/juggernaut.c54ad0a997ed9ba3db55.png",
+    "static/media/marvel_comp.jpg": "/Memory-Game/static/media/marvel_comp.238259dff649e45b056d.jpg",
+    "static/media/drdoom.png": "/Memory-Game/static/media/drdoom.739e6038bbc8de4633f4.png",
+    "static/media/wolverine.png": "/Memory-Game/static/media/wolverine.2c5d01b985b223499975.png",
+    "static/media/hulk.png": "/Memory-Game/static/media/hulk.7f9095a5f49098d6e67c.png",
+    "static/media/spiderman_2.png": "/Memory-Game/static/media/spiderman_2.93b1ea87a780d136a58d.png",
+    "static/media/red_hulk.png": "/Memory-Game/static/media/red_hulk.4126236a7c38b3316daa.png",
+    "static/media/vision.png": "/Memory-Game/static/media/vision.5ecfbf151c70e9a9b5a7.png",
+    "static/media/black_panther.png": "/Memory-Game/static/media/black_panther.f49ca3178cd6d816bb64.png",
+    "static/media/captain_america.png": "/Memory-Game/static/media/captain_america.5c818f12c553aaa7e2fc.png",
+    "static/media/blackwidow.png": "/Memory-Game/static/media/blackwidow.c363ce653d5d8aebc279.png",
+    "static/media/hela.png": "/Memory-Game/static/media/hela.fb813c863c8c1a738267.png",
+    "static/media/hawkeye.png": "/Memory-Game/static/media/hawkeye.bf1f98d89c3328ae4281.png",
+    "static/media/ironman.png": "/Memory-Game/static/media/ironman.a99faa436c7e21b03ab1.png",
+    "static/media/captain_marvel.png": "/Memory-Game/static/media/captain_marvel.6652419bc491225a34a2.png",
+    "static/media/venom.png": "/Memory-Game/static/media/venom.cdf7cdc99d204ee6368d.png",
+    "static/media/ant_man.png": "/Memory-Game/static/media/ant_man.b93e31648c76acc5bf6d.png",
+    "static/media/thanos.jpg": "/Memory-Game/static/media/thanos.0d2d5b0ee22190e89970.jpg",
+    "static/media/Roboto-Regular.ttf": "/Memory-Game/static/media/Roboto-Regular.a8d6ac03c7b96b7acb62.ttf",
+    "static/media/Rubik-SemiBold.ttf": "/Memory-Game/static/media/Rubik-SemiBold.52d2adf4cb818e79b61d.ttf",
+    "static/media/ComicNeue-Bold.ttf": "/Memory-Game/static/media/ComicNeue-Bold.e4e848b17b7a5804edc6.ttf",
+    "static/media/memory.png": "/Memory-Game/static/media/memory.0a3fbfb48b199f292444.png",
+    "index.html": "/Memory-Game/index.html",
+    "main.6371208a.css.map": "/Memory-Game/static/css/main.6371208a.css.map",
+    "main.2803d2d7.js.map": "/Memory-Game/static/js/main.2803d2d7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6371208a.css",
+    "static/js/main.2803d2d7.js"
+  ]
+}
