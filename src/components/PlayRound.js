@@ -116,6 +116,7 @@ function PlayRound() {
   const handleClick = (e) => {
     const marvelCharacter = e.target.parentNode.lastChild.textContent;
     playRound(marvelCharacter);
+    getNewQuote();
   };
 
   // Reset clicked cards

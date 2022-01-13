@@ -1,4 +1,6 @@
-# Memory Game
+# MARVEL Memory Game | ReactJS
+
+![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![image](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 One page web application made with React.
 
