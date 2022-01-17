@@ -4,13 +4,18 @@
 
 One page web application made with React.
 
+[Live Demo](https://earth-hominid.github.io/Memory-Game/)
+
 ## Description
 
 A memory game in which the player is shown randomly selected cards. Upon starting the game, the order of the cards is randomized and re-displayed. The players objective is to select the cards in sequence of their orignal order.
 
-This application is built with the React framework, utilizing functional components and React Hooks.
+This application is built with the React framework, utilizing functional components and React Hooks. I enjoyed building this application as it forced me to learn the following lessons regarding state in React:
 
-[Live Demo](https://earth-hominid.github.io/Memory-Game/)
+- How setting state triggers - rerenders
+- When and how state updates
+- The reasons state does not update immediately once it is set
+- The way in which event handlers access a "snapshot" of the current state.
 
 ## Install
 
