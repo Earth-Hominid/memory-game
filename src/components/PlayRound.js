@@ -8,7 +8,6 @@ import FinalScoreBoard from './endgame/FinalScoreBoard';
 import deckOfCards from './utils/deckOfCards';
 import quoteData from './utils/quotes';
 const startingQuote = 1;
-const maxCardLevel = 18;
 
 function PlayRound() {
   const [step, setStep] = useState(1);
@@ -49,7 +48,8 @@ function PlayRound() {
   // Increase level
   const increaseLevel = () => setLevel(level + 1);
   // Increase cards dealt
-  const increaseCards = () => setLevelCardAmount(levelCardAmount + 2);
+  const increaseCards = () =>
+    setLevelCardAmount((levelCardAmount) => levelCardAmount + 2);
   // Check highscore
   const checkHighScore = () => {
     if (score > highscore) {
@@ -84,10 +84,6 @@ function PlayRound() {
     dealCards();
   }, []);
 
-  // const playerHasClickedAllCards = (number) => {
-  //   clickedCards.length === number - 1;
-  // };
-
   const playRound = (marvelCharacter) => {
     if (!clickedCards.includes(marvelCharacter)) {
       increaseScore();
@@ -97,16 +93,13 @@ function PlayRound() {
       console.log('increase score');
       if (clickedCards.length === cards.length - 1) {
         startNextLevel();
-        console.log('increase level');
       } else {
         setCards(shuffle(cards));
-        console.log('cards shuffled');
       }
     } else {
       checkHighScore();
       checkHighLevel();
       endGame();
-      console.log('game over');
     }
   };
   const endGame = () => {
@@ -114,6 +107,7 @@ function PlayRound() {
   };
 
   const handleClick = (e) => {
+    e.preventDefault();
     const marvelCharacter = e.target.parentNode.lastChild.textContent;
     playRound(marvelCharacter);
     getNewQuote();
