@@ -19,7 +19,7 @@ This application is built with the React framework, utilizing functional compone
 
 ## Install
 
-```
+```js
 git clone https://github.com/Earth-Hominid/Memory-Game.git
 cd Memory-Game
 npm install
